@@ -11,5 +11,7 @@ var getData = async function (limit) {
 };
 
 getData(10).then(async function (pokemon) {
-  console.log(pokemon.results);
+  for (var pokemon of pokemon.results) {
+    console.log(pokemon);
+  }
 });

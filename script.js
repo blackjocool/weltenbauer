@@ -11,9 +11,13 @@ var getData = async function (limit) {
 };
 
 getData(10).then(async function (pokemon) {
+  var pokeElement = document.getElementById('pokemon');
+
   for (var pokemonObj of pokemon.results) {
     var pokemon = await callLink(pokemonObj.url);
+    var nameElement = document.createElement('div');
+    nameElement.innerHTML = pokemon.name;
 
-    console.log(pokemon.name);
+    pokeElement.appendChild(nameElement);
   }
 });

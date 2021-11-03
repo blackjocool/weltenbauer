@@ -1,11 +1,9 @@
 body {
-  background: orange;
+  background: #d9d1c8;
 }
 
-.textblock {
-  color: blue;
-}
-
-#id1 {
-  color: black;
+#pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
